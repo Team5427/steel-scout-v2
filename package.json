@@ -1,0 +1,27 @@
+{
+  "name": "steel-scout-v2",
+  "version": "1.0.0",
+  "description": "Scouting application for Steel Talons robotics team",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Team5427/steel-scout-v2.git"
+  },
+  "author": "Steel Talons Programming Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Team5427/steel-scout-v2/issues"
+  },
+  "homepage": "https://github.com/Team5427/steel-scout-v2#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1"
+  }
+}
