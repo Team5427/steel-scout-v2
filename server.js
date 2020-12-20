@@ -6,9 +6,7 @@ const passport = require("passport")          //Auth lib
 const cors = require('cors')                  //TODO: Handle cross-origin requests
 const morgan = require('morgan')              //Logger
 
-const {
-    Sequelize
-} = require('sequelize') //ORM for MySQL
+const {Sequelize} = require('sequelize') //ORM for MySQL
 
 require('dotenv').config(); //Initialize environment vars
 
