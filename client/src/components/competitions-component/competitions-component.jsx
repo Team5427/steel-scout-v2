@@ -3,6 +3,7 @@ import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import './competitions.styles.css'
 
+
 class CompetitionsComponent extends React.Component {
     render() {
         return (

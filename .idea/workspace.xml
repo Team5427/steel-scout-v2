@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce5e5b4e-ae5a-419b-aa7b-066cdd4bdcc0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/competitions/competitions.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/competitions/competitions.component.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lvkLDWp6jSgJhyBZd76jJjJ5uv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/custom-button" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\src\components\custom-button" />
+      <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\pages\competitions" />
+      <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\pages\teams" />
+      <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\pages\seasons" />
+      <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\pages\scouting" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce5e5b4e-ae5a-419b-aa7b-066cdd4bdcc0" name="Default Changelist" comment="" />
+      <created>1608484894098</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608484894098</updated>
+      <workItem from="1608484895278" duration="5770000" />
+      <workItem from="1608494363922" duration="8003000" />
+      <workItem from="1608504110487" duration="3138000" />
+      <workItem from="1608517714698" duration="7718000" />
+      <workItem from="1608573093529" duration="362000" />
+    </task>
+    <task id="LOCAL-00001" summary="Removed unnecessary const variables(imports), optimized code, formatted code, and added sql DB file to the project directory">
+      <created>1608486848532</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608486848532</updated>
+    </task>
+    <task id="LOCAL-00002" summary="sql file for the database">
+      <created>1608486928523</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608486928523</updated>
+    </task>
+    <task id="LOCAL-00003" summary="setup for pages of scouting app and navigation">
+      <created>1608497237365</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608497237365</updated>
+    </task>
+    <task id="LOCAL-00004" summary="crud API routes done for teams table and seasons table">
+      <created>1608500387890</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608500387890</updated>
+    </task>
+    <task id="LOCAL-00005" summary="static form setup for teams and seasons">
+      <created>1608503425138</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608503425138</updated>
+    </task>
+    <task id="LOCAL-00006" summary="competition form and team form setup, started working on table that will collect and display data from Database">
+      <created>1608527608549</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608527608549</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Removed unnecessary const variables(imports), optimized code, formatted code, and added sql DB file to the project directory" />
+    <MESSAGE value="sql file for the database" />
+    <MESSAGE value="setup for pages of scouting app and navigation" />
+    <MESSAGE value="crud API routes done for teams table and seasons table" />
+    <MESSAGE value="static form setup for teams and seasons" />
+    <MESSAGE value="competition form and team form setup, started working on table that will collect and display data from Database" />
+    <option name="LAST_COMMIT_MESSAGE" value="competition form and team form setup, started working on table that will collect and display data from Database" />
+  </component>
+</project>
