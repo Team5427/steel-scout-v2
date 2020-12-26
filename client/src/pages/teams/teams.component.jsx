@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import './teams.css';
-import TeamsComponent from '../../components/teams-component/teams.component'
 import axios from "axios";
+import TeamsComponent from '../../components/teams-component/teams.component'
+import './teams.css';
 
-const Teams = () => {
-
+const Competitions = () => {
     const [teams, setTeams] = useState([])
 
     useEffect(() => {
@@ -12,7 +11,7 @@ const Teams = () => {
             console.error("Couldn't pull team data from API!")
         })
     },
-        [])
+   [])
 
     useEffect(() => {
         console.log(teams)
@@ -21,30 +20,24 @@ const Teams = () => {
     return (
         <div className='teams'>
             <h1>Teams</h1>
-            <TeamsComponent />
-            <br />
-            <br />
-            <br />
-            <br />
+            <TeamsComponent/>
             <table>
                 <thead>
                     <tr>
-                        <th>Team ID</th>
-                        <th>Team Number</th>
+                       <th>Team Number</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {teams.map(team => (
-                        <tr key={team.team_id}>
-                            <td>{team.team_number}</td>
+                    {teams.map(t => (
+                        <tr key={t.team_id}>
+                            <td>{t.team_number}</td>
                         </tr>
                     ))}
                 </tbody>
             </table>
         </div>
     )
+
 }
 
-
-
-export default Teams
+export default Competitions

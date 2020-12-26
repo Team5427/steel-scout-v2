@@ -20,12 +20,13 @@ class CompetitionsComponent extends React.Component {
         }
 
     }
+
     onChangeCompetitionName(e) {
-        this.setState({ competition_name: e.target.value })
+        this.setState({competition_name: e.target.competition_name})
     }
 
     onChangeCompetitionDate(e) {
-        this.setState({ competition_date: e.target.value })
+        this.setState({competition_date: e.target.competition_date})
     }
 
     onSubmit(e) {
@@ -36,14 +37,14 @@ class CompetitionsComponent extends React.Component {
             competition_date: this.state.competition_date
         };
 
-        axios.post('http://localhost:5000/competitions/create', competitionObj)
+        axios.post('/competitions/create', competitionObj)
             .then((res) => {
                 console.log(res.data)
             }).catch((error) => {
-                console.log(error)
-            });
+            console.log(error)
+        });
 
-        this.setState({ competition_name: '', competition_date: '' })
+        this.setState({competition_name: '', competition_date: ''})
     }
 
 

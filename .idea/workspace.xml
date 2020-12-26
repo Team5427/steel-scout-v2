@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce5e5b4e-ae5a-419b-aa7b-066cdd4bdcc0" name="Default Changelist" comment="" />
+    <list default="true" id="ce5e5b4e-ae5a-419b-aa7b-066cdd4bdcc0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/competitions-component/competitions-component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/competitions-component/competitions-component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/teams/teams.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/teams/teams.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/teams.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/teams.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +61,23 @@
       <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\src" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,6 +92,8 @@
       <workItem from="1608517714698" duration="7718000" />
       <workItem from="1608573093529" duration="362000" />
       <workItem from="1608667396692" duration="7000" />
+      <workItem from="1609023098434" duration="787000" />
+      <workItem from="1609023949443" duration="556000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary const variables(imports), optimized code, formatted code, and added sql DB file to the project directory">
       <created>1608486848532</created>
