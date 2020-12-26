@@ -9,7 +9,7 @@ class TeamsComponent extends React.Component {
             <div className='competitions'>
                 <form>
                     <FormInput
-                        name='competition_name'
+                        name='team_number'
                         type='text'
                         placeholder='Team Number'
                         required

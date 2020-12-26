@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce5e5b4e-ae5a-419b-aa7b-066cdd4bdcc0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/competitions/competitions.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/competitions/competitions.component.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="ce5e5b4e-ae5a-419b-aa7b-066cdd4bdcc0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +67,7 @@
       <workItem from="1608504110487" duration="3138000" />
       <workItem from="1608517714698" duration="7718000" />
       <workItem from="1608573093529" duration="362000" />
+      <workItem from="1608667396692" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary const variables(imports), optimized code, formatted code, and added sql DB file to the project directory">
       <created>1608486848532</created>

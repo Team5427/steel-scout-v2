@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
-// import './competitions.css';
-// import CompetitionsComponent from '../../components/competitions-component/competitions-component';
+import './competitions.css';
+import CompetitionsComponent from '../../components/competitions-component/competitions-component';
 
 const Competitions = () => {
     const [competitions, setCompetitions] = useState([])
@@ -10,7 +10,8 @@ const Competitions = () => {
         axios.get("/competitions").then(res => setCompetitions(res.data)).catch(ex => {
             console.error("Couldn't pull competition data from API!")
         })
-    }, [])
+    },
+   [])
 
     useEffect(() => {
         console.log(competitions)
@@ -19,7 +20,7 @@ const Competitions = () => {
     return (
         <div className='competitions'>
             <h1>Competitions</h1>
-            {/* <CompetitionsComponent/> */}
+            <CompetitionsComponent/>
             <table>
                 <thead>
                     <tr>
