@@ -10,7 +10,9 @@ module.exports = (sequelize) => {
     router.get("/", (req, res, next) => { //Get all competitions
         console.log("--- READING all competitions")
 
-        Competitions.findAll({raw: true}).then(competitions => {
+        Competitions.findAll({raw: true, order: [
+            ['competition_id', 'ASC'],
+        ]}).then(competitions => {
             console.log("Found all competitions!")
             res.send(competitions)
         }).catch(err => {

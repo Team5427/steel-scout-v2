@@ -57,6 +57,7 @@ app.use('/teams', teamsRoute)
 const scoutingRoute = require('./routes/scouting')(sequelize); //Pit Scouting reqs routed to routes/auth.js
 app.use('/scouting', scoutingRoute)
 
+
 // ----------------------- END ROUTING ----------------------- \\
 
 
@@ -67,10 +68,10 @@ app.use((err, req, res, next) => { //Error logging
 
 app.listen(port, async () => { //Starts server & connects to MySQL DB
     try {
-        // await sequelize.authenticate(); 
-        // console.log('MySQL Connection has been established successfully.');
+        await sequelize.authenticate(); 
+        console.log('MySQL Connection has been established successfully.');
     } catch (error) {
-        // console.error('Unable to connect to the database:', error);
+        console.error('Unable to connect to the database:', error);
     }
     console.log(`Server listening on port ${port}!`)
 });

@@ -1,4 +1,4 @@
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom';
 import HomePage from './pages/home-page/home-page.component';
 import LoginPage from './pages/login-page/login-page.component';
 import Scouting from './pages/scouting/scouting.component';
@@ -17,6 +17,7 @@ function App() {
             <Route path='/teams' component={Teams}/>
             <Route path='/seasons' component={Seasons}/>
             <Route path='/scouting' component={Scouting}/>
+            <Redirect to="/competitions"/>
         </Switch>
 
 
