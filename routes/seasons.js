@@ -1,4 +1,3 @@
-const e = require('express');
 const express = require('express');
 const {DataTypes} = require('sequelize');
 const router = express.Router();
@@ -9,7 +8,7 @@ module.exports = (sequelize) => {
     const Season = require('../models/seasons')(sequelize, DataTypes)
 
     router.get("/", (req, res, next) => { //Get all season entries
-        console.log("--- READING all seasons entries")
+        console.log("--- READING all seasons")
 
         Season.findAll({raw: true}).then(season => {
             console.log("Found all season entries!")
@@ -24,7 +23,7 @@ module.exports = (sequelize) => {
         const id = parseInt(req.params.id)
 
         if (!isNaN(id)) {
-            console.log(`--- READING season entry with id ${req.params.id}`)
+            console.log(`--- READING season with id ${req.params.id}`)
             Season.findOne({  //Queries DB for team entry
                 where: {
                     season_id: id
@@ -32,7 +31,7 @@ module.exports = (sequelize) => {
                 raw: true
             }).then(season => {
                 if (season) {
-                    console.log(`Found season entry with id ${season.team_id}!`)
+                    console.log(`Found season with id ${season.team_id}!`)
                     res.send(season)
                 } else {
                     console.log("Couldn't find season entry with that id!")
@@ -44,14 +43,14 @@ module.exports = (sequelize) => {
             })
 
         } else {
-            console.log(`--- READING season entry`)
+            console.log(`--- READING season`)
             console.log(`Invalid ID Format!`)
             res.status(400).send({"error": `ID INVALID FORMAT`})
         }
     })
 
     router.post("/create", (req, res, next) => { //Create team entry
-        console.log(`--- CREATING new season entry`)
+        console.log(`--- CREATING new season`)
         const season_name = req.body.season_name
 
 
@@ -84,22 +83,27 @@ module.exports = (sequelize) => {
     })
 
     router.post("/update", (req, res, next) => {
+        const season_id = parseInt(req.body.season_id)
         const season_name = req.body.season_name
 
 
-        if (season_name) {
-            console.log(`--- UPDATING team entry with id ${req.body.team_id}`)
+        if (season_name && !isNaN(season_id)) {
+            console.log(`--- UPDATING season with id ${req.body.team_id}`)
 
             //TODO: Season ID Validation
             Season.update({
-                season_name: season_name
+                season_name
+            }, {
+                where: {
+                    season_id
+                }
             }).then(team => {
                 if (team[0]) {
-                    console.log(`Season "${season_name}" is updated"`)
+                    console.log(`Season "${season_name}" was updated"`)
                     res.send({"success": true})
                 } else {
                     console.log("Couldn't update season (It might not exist)!")
-                    res.status(404).send({"error": "SEASON NOT FOUND"})
+                    res.status(400).send({"error": "COULD NOT UPDATE"})
                 }
             }).catch(err => {
                 console.error(err)
@@ -117,13 +121,13 @@ module.exports = (sequelize) => {
     })
 
     router.post("/delete", (req, res, next) => {
-        const id = parseInt(req.body.team_id)
+        const id = parseInt(req.body.season_id)
 
         if (!isNaN(id)) {
-            console.log(`--- DELETING season entry with id ${req.body.team_id}`)
+            console.log(`--- DELETING season entry ${id}`)
             Season.destroy({
                 where: {
-                    team_id: id
+                    season_id: id
                 }
             }).then(success => {
                 if (success) {

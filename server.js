@@ -45,9 +45,17 @@ app.use(morgan('dev'))
 const compRoute = require('./routes/competitions')(sequelize); //Competitions reqs routed to routes/auth.js
 app.use('/competitions', compRoute)
 
-const pitScoutingRoute = require('./routes/pitscouting')(sequelize); //Competitions reqs routed to routes/auth.js
+const pitScoutingRoute = require('./routes/pitscouting')(sequelize); //Pit Scouting reqs routed to routes/auth.js
 app.use('/pitscouting', pitScoutingRoute)
 
+const seasonsRoute = require('./routes/seasons')(sequelize); //Pit Scouting reqs routed to routes/auth.js
+app.use('/seasons', seasonsRoute)
+
+const teamsRoute = require('./routes/teams')(sequelize); //Pit Scouting reqs routed to routes/auth.js
+app.use('/teams', teamsRoute)
+
+const scoutingRoute = require('./routes/scouting')(sequelize); //Pit Scouting reqs routed to routes/auth.js
+app.use('/scouting', scoutingRoute)
 
 // ----------------------- END ROUTING ----------------------- \\
 

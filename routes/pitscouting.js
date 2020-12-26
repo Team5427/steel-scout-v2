@@ -1,4 +1,3 @@
-const e = require('express');
 const express = require('express');
 const { DataTypes } = require('sequelize');
 const router = express.Router();
@@ -52,20 +51,22 @@ module.exports = (sequelize) => {
 
     router.post("/create", (req, res, next) => { //Create pit scouting entry
         console.log(`--- CREATING new pit scouting entry`)
-        const scouter_id = req.body.scouter_id
-        const competition_id = req.body.competition_id
-        const team_id = req.body.team_id
-        const climb = req.body.climb
-        const adjust_level = req.body.adjust_level
-        const drive_team_experience = req.body.drive_team_experience
-        const inner_port = req.body.inner_port
-        const higher_port = req.body.higher_port
-        const lower_port = req.body.lower_port
-        const defense = req.body.defense
-        const autonomous_abilities = req.body.autonomous_abilities
+        const scouter_id = parseInt(req.body.scouter_id)
+        const competition_id = parseInt(req.body.competition_id)
+        const team_id = parseInt(req.body.team_id)
+        const climb = parseInt(req.body.climb)
+        const adjust_level = parseInt(req.body.adjust_level)
+        const drive_team_experience = parseInt(req.body.drive_team_experience)
+        const inner_port = parseInt(req.body.inner_port)
+        const higher_port = parseInt(req.body.higher_port)
+        const lower_port = parseInt(req.body.lower_port)
+        const defense = parseInt(req.body.defense)
+        const autonomous_abilities = parseInt(req.body.autonomous_abilities)
 
         
-        if(scouter_id && competition_id && team_id && climb && adjust_level && drive_team_experience && inner_port && higher_port && lower_port && defense && autonomous_abilities) {
+        if(!isNaN(scouter_id) && !isNaN(competition_id) && !isNaN(team_id) && !isNaN(climb) 
+        && !isNaN(adjust_level) && !isNaN(drive_team_experience) && !isNaN(inner_port)
+        && !isNaN(higher_port) && !isNaN(lower_port) && !isNaN(defense) && !isNaN(autonomous_abilities)) {
             //TODO: Season ID Validation
             PitScouting.create({
                 scouter_id: scouter_id,
@@ -96,27 +97,27 @@ module.exports = (sequelize) => {
             console.log(`Invalid Input Format!`)
 
             let err = ""
-            if(!scouter_id)
+            if(isNaN(scouter_id))
                 err+=" scouter_id "
-            if(!competition_id)
+            if(isNaN(competition_id))
                 err+=" competition_id "
-            if(!team_id)
+            if(isNaN(team_id))
                 err+=" team_id "
-            if(!climb)
+            if(isNaN(climb))
                 err+=" climb "
-            if(!adjust_level)
+            if(isNaN(adjust_level))
                 err+=" adjust_level "
-            if(!drive_team_experience)
+            if(isNaN(drive_team_experience))
                 err+=" drive_team_experience "
-            if(!inner_port)
+            if(isNaN(inner_port))
                 err+=" inner_port "
-            if(!higher_port)
+            if(isNaN(higher_port))
                 err+=" higher_port "
-            if(!lower_port)
+            if(isNaN(lower_port))
                 err+=" lower_port "
-            if(!defense)
+            if(isNaN(defense))
                 err+=" defense "
-            if(!autonomous_abilities)
+            if(isNaN(autonomous_abilities))
                 err+=" autonomous_abilities "
 
             res.status(400).send({"error":`BAD PARAMS (No${err}provided)`})
@@ -124,19 +125,22 @@ module.exports = (sequelize) => {
     })
 
     router.post("/update", (req, res, next) => {
-        const scouter_id = req.body.scouter_id
-        const competition_id = req.body.competition_id
-        const team_id = req.body.team_id
-        const climb = req.body.climb
-        const adjust_level = req.body.adjust_level
-        const drive_team_experience = req.body.drive_team_experience
-        const inner_port = req.body.inner_port
-        const higher_port = req.body.higher_port
-        const lower_port = req.body.lower_port
-        const defense = req.body.defense
-        const autonomous_abilities = req.body.autonomous_abilities
+        const pit_scouting_id = parseInt(req.body.pit_scouting_id)
+        const scouter_id = parseInt(req.body.scouter_id)
+        const competition_id = parseInt(req.body.competition_id)
+        const team_id = parseInt(req.body.team_id)
+        const climb = parseInt(req.body.climb)
+        const adjust_level = parseInt(req.body.adjust_level)
+        const drive_team_experience = parseInt(req.body.drive_team_experience)
+        const inner_port = parseInt(req.body.inner_port)
+        const higher_port = parseInt(req.body.higher_port)
+        const lower_port = parseInt(req.body.lower_port)
+        const defense = parseInt(req.body.defense)
+        const autonomous_abilities = parseInt(req.body.autonomous_abilities)
 
-        if(scouter_id && competition_id && team_id && climb && adjust_level && drive_team_experience && inner_port && higher_port && lower_port && defense && autonomous_abilities) {
+        if(!isNaN(scouter_id) && !isNaN(competition_id) && !isNaN(team_id) && !isNaN(climb) 
+        && !isNaN(adjust_level) && !isNaN(drive_team_experience) && !isNaN(inner_port)
+        && !isNaN(higher_port) && !isNaN(lower_port) && !isNaN(defense) && !isNaN(autonomous_abilities)) {
             console.log(`--- UPDATING pitscouting entry with id ${req.body.pit_scouting_id}`)
 
             //TODO: Season ID Validation
@@ -154,15 +158,15 @@ module.exports = (sequelize) => {
                 autonomous_abilities: autonomous_abilities
             }, {
                 where: {
-                    competition_id: competition_id
+                    pit_scouting_id: pit_scouting_id
                 }
-            }).then(competition => {
-                if(competition[0]) {
-                    console.log(`Competition "${competition_name}" updated for date "${competition_date}"`)
+            }).then(entry => {
+                if(entry[0]) {
+                    console.log(`Entry "${pit_scouting_id}" updated`)
                     res.send({"success":true})
                 } else {
-                    console.log("Couldn't update competition (It might not exist)!")
-                    res.status(404).send({"error":"COMP NOT FOUND"})
+                    console.log("Couldn't update pit scouting entry (It might not exist)!")
+                    res.status(404).send({"error":"ENTRY NOT FOUND"})
                 }
             }).catch(err => {
                 console.error(err)
@@ -173,27 +177,27 @@ module.exports = (sequelize) => {
             console.log(`Invalid Input Format!`)
 
             let err = ""
-            if(!scouter_id)
+            if(isNaN(scouter_id))
                 err+=" scouter_id "
-            if(!competition_id)
+            if(isNaN(competition_id))
                 err+=" competition_id "
-            if(!team_id)
+            if(isNaN(team_id))
                 err+=" team_id "
-            if(!climb)
+            if(isNaN(climb))
                 err+=" climb "
-            if(!adjust_level)
+            if(isNaN(adjust_level))
                 err+=" adjust_level "
-            if(!drive_team_experience)
+            if(isNaN(drive_team_experience))
                 err+=" drive_team_experience "
-            if(!inner_port)
+            if(isNaN(inner_port))
                 err+=" inner_port "
-            if(!higher_port)
+            if(isNaN(higher_port))
                 err+=" higher_port "
-            if(!lower_port)
+            if(isNaN(lower_port))
                 err+=" lower_port "
-            if(!defense)
+            if(isNaN(defense))
                 err+=" defense "
-            if(!autonomous_abilities)
+            if(isNaN(autonomous_abilities))
                 err+=" autonomous_abilities "
 
             res.status(400).send({"error":`BAD PARAMS (No${err}provided)`})
@@ -215,7 +219,7 @@ module.exports = (sequelize) => {
                     res.send({"success":true})
                 } else {
                     console.log("Couldn't find pit scouting entry with that id!")
-                    res.status(404).send({"error":"COMP NOT FOUND"})
+                    res.status(404).send({"error":"ENTRY NOT FOUND"})
                 }
             })
         } else {

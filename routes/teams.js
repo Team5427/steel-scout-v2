@@ -1,4 +1,3 @@
-const e = require('express');
 const express = require('express');
 const {DataTypes} = require('sequelize');
 const router = express.Router();
@@ -85,17 +84,21 @@ module.exports = (sequelize) => {
 
     router.post("/update", (req, res, next) => {
         const team_number = req.body.team_number
-
+        const team_id = req.body.team_id
 
         if (team_number) {
             console.log(`--- UPDATING team entry with id ${req.body.team_id}`)
 
             //TODO: Season ID Validation
             Team.update({
-                team_number: team_number
+                team_number
+            }, {
+                where: {
+                    team_id
+                }
             }).then(team => {
                 if (team[0]) {
-                    console.log(`Team "${team_number}" is updated"`)
+                    console.log(`Team "${team_id}" has been set to #${team_number}"`)
                     res.send({"success": true})
                 } else {
                     console.log("Couldn't update team (It might not exist)!")
