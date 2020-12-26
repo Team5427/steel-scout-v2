@@ -77,6 +77,8 @@ module.exports = (sequelize) => {
             let err = ""
             if (!season_name)
                 err += " season_name "
+            if (isNaN(season_id))
+                err += " season_id "
 
             res.status(400).send({"error": `BAD PARAMS (No${err}provided)`})
         }
@@ -116,6 +118,9 @@ module.exports = (sequelize) => {
             let err = ""
             if (!season_name)
                 err += " season_name "
+            if (isNaN(season_id))
+                err += " season_id "
+
             res.status(400).send({"error": `BAD PARAMS (No${err}provided)`})
         }
     })
