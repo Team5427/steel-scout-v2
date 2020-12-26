@@ -28,11 +28,7 @@
     "express-session": "^1.17.1",
     "morgan": "^1.10.0",
     "mysql2": "^2.2.5",
-<<<<<<< HEAD
     "nodemon": "^2.0.6",
-=======
-    "node-sass": "^4.14.1",
->>>>>>> 90c3867a72ee22be8dee972a231423b905ad794a
     "passport": "^0.4.1",
     "react-bootstrap-table-next": "^4.0.3",
     "sequelize": "^6.3.5"

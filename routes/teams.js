@@ -55,7 +55,7 @@ module.exports = (sequelize) => {
 
 
         if (team_number) {
-            //TODO: Season ID Validation
+            //TODO: Team ID Validation
             Team.create({
                 team_number: team_number
             }).then(teamsEntry => {
@@ -89,7 +89,7 @@ module.exports = (sequelize) => {
         if (team_number) {
             console.log(`--- UPDATING team entry with id ${req.body.team_id}`)
 
-            //TODO: Season ID Validation
+            //TODO: Team ID Validation
             Team.update({
                 team_number
             }, {

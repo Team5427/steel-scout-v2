@@ -53,9 +53,9 @@ module.exports = (sequelize) => {
         console.log(`--- CREATING new competition`)
         const competition_name = req.body.competition_name
         const competition_date = req.body.competition_date
-        const season_id = req.body.season_id
+        const season_id = parseInt(req.body.season_id)
         
-        if(competition_name && competition_date && season_id) {
+        if(competition_name && competition_date && !isNaN(season_id)) {
             //TODO: Season ID Validation
             Competitions.create({
                 competition_name: competition_name,
@@ -82,7 +82,7 @@ module.exports = (sequelize) => {
                 err+=" competition_name "
             if(!competition_date)
                 err+=" competition_date "
-            if(!season_id)
+            if(isNaN(season_id))
                 err+=" season_id "
 
             res.status(400).send({"error":`BAD PARAMS (No${err}provided)`})
@@ -90,12 +90,12 @@ module.exports = (sequelize) => {
     })
 
     router.post("/update", (req, res, next) => {
-        const competition_id = req.body.competition_id
+        const competition_id = parseInt(req.body.competition_id)
         const competition_name = req.body.competition_name
         const competition_date = req.body.competition_date
-        const season_id = req.body.season_id
+        const season_id = parseInt(req.body.season_id)
 
-        if(competition_id && competition_name && competition_date && season_id) {
+        if(!parseInt(competition_id) && competition_name && competition_date && !parseInt(season_id)) {
             console.log(`--- UPDATING competition with id ${req.body.competition_id}`)
 
             //TODO: Season ID Validation
@@ -124,13 +124,13 @@ module.exports = (sequelize) => {
             console.log(`Invalid Input Format!`)
 
             let err = ""
-            if(!competition_id)
+            if(isNaN(competition_id))
                 err+=" competition_id "
             if(!competition_name)
                 err+=" competition_name "
             if(!competition_date)
                 err+=" competition_date "
-            if(!season_id)
+            if(isNaN(season_id))
                 err+=" season_id "
 
             res.status(400).send({"error":`BAD PARAMS (No${err}provided)`})

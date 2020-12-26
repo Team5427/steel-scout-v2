@@ -19,12 +19,12 @@ module.exports = (sequelize) => {
         })
     })
 
-    router.get("/get/:id", (req, res, next) => { //Get competition by ID
+    router.get("/get/:id", (req, res, next) => { //Get scouting entry by ID
         const id = parseInt(req.params.id)
 
         if (!isNaN(id)) {
             console.log(`--- READING scouting entry with id ${req.params.id}`)
-            Scouting.findOne({  //Queries DB for competition
+            Scouting.findOne({  //Queries DB for entry
                 where: {
                     scouting_id: id
                 },

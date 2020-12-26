@@ -24,7 +24,7 @@ module.exports = (sequelize) => {
 
         if (!isNaN(id)) {
             console.log(`--- READING season with id ${req.params.id}`)
-            Season.findOne({  //Queries DB for team entry
+            Season.findOne({  //Queries DB for season entry
                 where: {
                     season_id: id
                 },
@@ -49,7 +49,7 @@ module.exports = (sequelize) => {
         }
     })
 
-    router.post("/create", (req, res, next) => { //Create team entry
+    router.post("/create", (req, res, next) => { //Create season entry
         console.log(`--- CREATING new season`)
         const season_name = req.body.season_name
 

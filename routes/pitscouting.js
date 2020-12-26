@@ -67,7 +67,7 @@ module.exports = (sequelize) => {
         if(!isNaN(scouter_id) && !isNaN(competition_id) && !isNaN(team_id) && !isNaN(climb) 
         && !isNaN(adjust_level) && !isNaN(drive_team_experience) && !isNaN(inner_port)
         && !isNaN(higher_port) && !isNaN(lower_port) && !isNaN(defense) && !isNaN(autonomous_abilities)) {
-            //TODO: Season ID Validation
+            //TODO: ID Validation
             PitScouting.create({
                 scouter_id: scouter_id,
                 competition_id: competition_id,
@@ -143,7 +143,7 @@ module.exports = (sequelize) => {
         && !isNaN(higher_port) && !isNaN(lower_port) && !isNaN(defense) && !isNaN(autonomous_abilities)) {
             console.log(`--- UPDATING pitscouting entry with id ${req.body.pit_scouting_id}`)
 
-            //TODO: Season ID Validation
+            //TODO: ID Validation
             PitScouting.update({
                 scouter_id: scouter_id,
                 competition_id: competition_id,
