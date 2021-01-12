@@ -97,7 +97,7 @@ module.exports = (sequelize) => {
         const competition_date = req.body.competition_date
         const season_id = parseInt(req.body.season_id)
 
-        if(!parseInt(competition_id) && competition_name && competition_date && !parseInt(season_id)) {
+        if(!isNaN(competition_id) && competition_name && competition_date && !isNaN(season_id)) {
             console.log(`--- UPDATING competition with id ${req.body.competition_id}`)
 
             //TODO: Season ID Validation
