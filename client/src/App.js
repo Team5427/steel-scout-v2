@@ -1,23 +1,41 @@
 import {Switch, Route, Redirect} from 'react-router-dom';
-import HomePage from './pages/home-page/home-page.component';
-import LoginPage from './pages/login-page/login-page.component';
-import Scouting from './pages/scouting/scouting.component';
-import Seasons from './pages/seasons/seasons.component';
+import Seasons from './pages/seasons/seasonsViewData.component';
 import Teams from './pages/teams/teams.component';
-import PitScouting from "./pages/pit_scouting/pit-scouting.component";
-import Competitions from "./pages/competitions/competitions.component";
+import CompetitionsData from "./pages/competitions/competitionsViewData.component";
+import CompetitionsComponent from "./pages/competitions/competitions.component";
+import TeamData from "./pages/teams/teamsViewData.component";
+import SeasonData from "./pages/seasons/seasonsViewData.component";
+import SeasonsComponent from "./pages/seasons/seasons.component";
+import ScoutingComponent from "./pages/scouting/scouting.component";
+import ScoutingData from "./pages/scouting/scoutingViewData.component";
+import PitScoutingComponent from "./pages/pit_scouting/pit-scouting.component";
+import PitscoutingData from "./pages/pit_scouting/pit-scoutingViewData.component";
 
 function App() {
     return (
         <Switch>
-            <Route exact path='/' component={HomePage}/>
-            <Route path='/login' component={LoginPage}/>
-            <Route path='/competitions' component={Competitions}/>
-            <Route path='/pit_scouting' component={PitScouting}/>
+
+            {/*competitions*/}
+            <Route path='/competitionsData' component={CompetitionsData}/>
+            <Route path='/competitions' component={CompetitionsComponent}/>
+
+            {/*teams*/}
             <Route path='/teams' component={Teams}/>
-            <Route path='/seasons' component={Seasons}/>
-            <Route path='/scouting' component={Scouting}/>
-            <Redirect to="/competitions"/>
+            <Route path='/teamsData' component={TeamData}/>
+
+            {/*seasons*/}
+            <Route path='/seasons' component={SeasonsComponent}/>
+            <Route path='/seasonData' component={SeasonData}/>
+
+            {/*scouting*/}
+            <Route path='/scouting' component={ScoutingComponent}/>
+            <Route path='/scoutingData' component={ScoutingData}/>
+
+            {/*pit-scouting*/}
+            <Route path='/pit-scouting' component={PitScoutingComponent}/>
+            <Route path='/pit-scoutingData' component={PitscoutingData}/>
+
+
         </Switch>
 
 

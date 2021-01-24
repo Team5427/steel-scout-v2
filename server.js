@@ -38,7 +38,9 @@ app.use(bodyParser.urlencoded({
 //Log HTTP Requests in console
 app.use(morgan('dev'))
 
-
+app.use(
+    cors()
+);
 // ----------------------- END MIDDLEWARE ----------------------- \\
 
 
@@ -68,7 +70,7 @@ app.use((err, req, res, next) => { //Error logging
 
 app.listen(port, async () => { //Starts server & connects to MySQL DB
     try {
-        await sequelize.authenticate(); 
+        await sequelize.authenticate();
         console.log('MySQL Connection has been established successfully.');
     } catch (error) {
         console.error('Unable to connect to the database:', error);

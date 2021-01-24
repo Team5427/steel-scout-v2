@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import './seasons.css';
 import axios from "axios";
-import SeasonsComponent from '../../components/seasons-component/seasons.component'
-const Teams = () => {
+const SeasonData = () => {
 
     const [seasons, setTeams] = useState([])
 
@@ -19,24 +17,22 @@ const Teams = () => {
 
     return (
         <div className='teams'>
-            <h1>Seasons</h1>
-            <SeasonsComponent />
-            <br />
-            <br />
-            <br />
-            <br />
+            <h1>Viewing Seasons Data</h1>
 
             <table>
                 <thead>
                     <tr>
-                        <th>Season ID</th>
                         <th>Season Name</th>
+                        <th colSpan="2">Action</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     {seasons.map(season => (
                         <tr key={season.season_id}>
                             <td>{season.season_name}</td>
+                            <td><button>Edit</button></td>
+                            <td><button>Delete</button></td>
                         </tr>
                     ))}
                 </tbody>
@@ -47,4 +43,4 @@ const Teams = () => {
 
 
 
-export default Teams
+export default SeasonData

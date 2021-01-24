@@ -2,12 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce5e5b4e-ae5a-419b-aa7b-066cdd4bdcc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/pages/competitions/competitions.component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/competitions/competitionsViewData.component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/teams/teams.component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/teams/teamsViewData.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/competitions-component/competitions-component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/competitions-component/competitions-component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/teams/teams.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/teams/teams.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/competitions-component/competitions-component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/competitions-component/competitions.styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/custom-button/custom-buttom.styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/custom-button/custom-button.component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/form-input/form-input.component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/form-input/form-input.styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/seasons-component/seasons.component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/seasons-component/seasons.styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/teams-component/teams.component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/teams-component/teams.styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/competitions/competitions.component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/competitions/competitions.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/pit_scouting/pit-scouting.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/pit_scouting/pit-scouting.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/pit_scouting/pit-scouting.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/pit_scouting/pit-scoutingViewData.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/scouting/scouting.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/scouting/scouting.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/scouting/scouting.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/scouting/scoutingViewData.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/seasons/seasons.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/seasons/seasonsViewData.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/seasons/seasons.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/seasons/seasons.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/teams/teams.component.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/teams/teams.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/teams.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/teams.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/custom-button" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/routes" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -46,22 +71,34 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tsaic\Downloads\steel-scout-v2\routes" />
       <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\src\components\custom-button" />
       <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\pages\competitions" />
       <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\pages\teams" />
       <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\pages\seasons" />
-      <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\pages\scouting" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tsaic\Downloads\steel-scout-v2\client\src\pages\teams" />
       <recent name="C:\Users\Sai Charan\Documents\ProgrammingStuff\steel-scout-v2\client\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -74,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -94,6 +132,9 @@
       <workItem from="1608667396692" duration="7000" />
       <workItem from="1609023098434" duration="787000" />
       <workItem from="1609023949443" duration="556000" />
+      <workItem from="1611435295323" duration="3203000" />
+      <workItem from="1611450947768" duration="10939000" />
+      <workItem from="1611509264447" duration="3626000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary const variables(imports), optimized code, formatted code, and added sql DB file to the project directory">
       <created>1608486848532</created>
